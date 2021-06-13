@@ -1,11 +1,12 @@
 import React from 'react';
 import { Button, Dialog, DialogContent, DialogContentText, FormControl, FormGroup, makeStyles, TextField, Typography } from '@material-ui/core';
 import { useStylesSignIn } from '../pages/Singin';
-import TwitterIcon from '@material-ui/icons/AccessibleForward';
+import CloseIcon from '@material-ui/icons/Close';
+import { grey } from '@material-ui/core/colors';
 
 
 interface ModalBlockProps {
-    title: string;
+    title?: string;
     children: React.ReactNode;
     classes?: ReturnType<typeof useStylesSignIn>;
     visable?: boolean;
@@ -17,21 +18,17 @@ export const ModalBlock: React.FC<ModalBlockProps> = ({ title, classes, children
         return null;
     }
     
-   console.log(classes?.registerFild);
-   
-    
-    
     
     return (
-        <Dialog className={classes?.dialogFild} open={visable} onClose={onClose}>
-            <TwitterIcon onClick={onClose} color='primary' />
+        <Dialog maxWidth="md" className={classes?.dialogFild} open={visable} onClose={onClose}>
+            <CloseIcon style={{cursor: "pointer"}} onClick={onClose} color='primary' />
+            <div style={{width: '100%', height: 3, backgroundColor: grey[500], marginTop: 10}}></div>
             <DialogContentText  variant='h6'>
                 {title}
             </DialogContentText>
             <DialogContent>
                 {children}
             </DialogContent>
-            <Button onClick={onClose} color='primary' variant="contained" fullWidth >Enter</Button>
         </Dialog>
     )
 }

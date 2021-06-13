@@ -94,7 +94,7 @@ export const useStylesSignIn = makeStyles((theme) => ({
 }));
 
 
-export const SignIn: React.FC = (): React.ReactElement =>  {
+export const SignIn: React.FC = (): React.ReactElement => {
     const classes = useStylesSignIn();
     const [visableModal, setVisableModal] = React.useState<'singIn' | 'singOut'>();
 
@@ -168,7 +168,7 @@ export const SignIn: React.FC = (): React.ReactElement =>  {
                                     type='password'
                                     fullWidth
                                 />
-
+                                <Button onClick={handleCloseModel} color='primary' variant="contained" fullWidth >Enter</Button>
                             </FormGroup>
                         </FormControl>
                     </ModalBlock>
@@ -199,10 +199,12 @@ export const SignIn: React.FC = (): React.ReactElement =>  {
                                     type='password'
                                     fullWidth
                                 />
+                                <Button onClick={handleCloseModel} color='primary' variant="contained" fullWidth >Enter</Button>
                             </FormGroup>
                         </FormControl>
                     </ModalBlock>
                 </div>
+                
             </section>
         </div>
 

@@ -16,6 +16,9 @@ export const theme = createMuiTheme({
     background: {
       default: '#fff',
     },
+    text: {
+      primary: '#14171a',
+    },
   },
   overrides: {
     MuiButton: {
@@ -48,6 +51,10 @@ export const theme = createMuiTheme({
     MuiIconButton: {
       root: {
         padding: 0,
+      },
+      label: {
+        width: 50,
+        height: 50,
       }
     },
     MuiGrid: {
@@ -55,7 +62,7 @@ export const theme = createMuiTheme({
 
       },
       item: {
-        
+
       },
     },
     MuiInputBase: {
