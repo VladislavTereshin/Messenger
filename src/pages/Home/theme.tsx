@@ -1,4 +1,4 @@
-import { Paper, Grid, Typography, makeStyles, withStyles, InputBase, TextField, Avatar, TextareaAutosize, IconButton, Button, InputAdornment, List, ListItemText, ListItem, Divider, Theme } from '@material-ui/core';
+import { makeStyles, Theme } from '@material-ui/core';
 import { grey } from '@material-ui/core/colors';
 
 export const useHomeStyles = makeStyles((theme: Theme) => ({
@@ -105,6 +105,10 @@ export const useHomeStyles = makeStyles((theme: Theme) => ({
     },
     tweetsUserName: {
         color: grey[500],
+        marginLeft: 20,
+    },
+    tweetsTime: {
+        marginLeft: 10,
     },
     tweetsText: {
         marginBottom: 10,

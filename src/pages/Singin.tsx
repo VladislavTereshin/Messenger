@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Dialog, DialogContentText, FormControl, FormGroup, makeStyles, Modal, TextField, Typography } from '@material-ui/core';
-import TwitterIcon from '@material-ui/icons/AccessibleForward';
+import TwitterIcon from '@material-ui/icons/Twitter';
 import SearchIcon from '@material-ui/icons/Search';
 import ModalBlock from '../components/ModalBlock';
 
@@ -39,11 +39,11 @@ export const useStylesSignIn = makeStyles((theme) => ({
     },
     blueSideBigIncon: {
         position: 'absolute',
-        top: 0,
-        left: 0,
-        color: '#F0A0F0',
-        width: '100%',
-        height: '100%',
+        top: 30,
+        left: 200,
+        color: '#1596e5',
+        width: '200%',
+        height: '200%',
         transform: 'translate(-30%, -20%)',
         zIndex: 1,
     },
@@ -116,9 +116,9 @@ export const SignIn: React.FC = (): React.ReactElement => {
             <section className={classes.blueSide}>
                 <TwitterIcon color='primary' className={classes.blueSideBigIncon} />
                 <ul className={classes.blueSideListInfo} >
-                    <li><Typography className={classes.blueSideInfoItem} variant='h6'><SearchIcon className={classes.blueSideIncon} />Read Read Read Read</Typography></li>
+                    {/* <li><Typography className={classes.blueSideInfoItem} variant='h6'><SearchIcon className={classes.blueSideIncon} />Read Read Read Read</Typography></li>
                     <li><Typography className={classes.blueSideInfoItem} variant='h6'><SearchIcon className={classes.blueSideIncon} />Read</Typography></li>
-                    <li><Typography className={classes.blueSideInfoItem} variant='h6'><SearchIcon className={classes.blueSideIncon} />Read</Typography></li>
+                    <li><Typography className={classes.blueSideInfoItem} variant='h6'><SearchIcon className={classes.blueSideIncon} />23432</Typography></li> */}
                 </ul>
 
             </section>
@@ -199,7 +199,7 @@ export const SignIn: React.FC = (): React.ReactElement => {
                                     type='password'
                                     fullWidth
                                 />
-                                <Button onClick={handleCloseModel} color='primary' variant="contained" fullWidth >Enter</Button>
+                                <Button onClick={handleCloseModel} color='primary' variant="contained" fullWidth >Вход</Button>
                             </FormGroup>
                         </FormControl>
                     </ModalBlock>

@@ -4,7 +4,7 @@ import RepeatIcon from '@material-ui/icons/Repeat';
 import LikeIcon from '@material-ui/icons/FavoriteBorder';
 import ReplyIcon from '@material-ui/icons/Reply';
 import classNames from 'classnames';
-import { Paper, Grid, IconButton, Typography, Avatar, ButtonBase } from '@material-ui/core';
+import { Paper, IconButton, Typography, Avatar} from '@material-ui/core';
 import { useHomeStyles } from '../pages/Home/theme';
 
 
@@ -28,7 +28,9 @@ export const Tweet: React.FC<TweetProps> = ({ text, user, classes }: TweetProps)
                 <Avatar className={classes.tweetAvatar} alt="User avatar" src={user.avatarUrl} />
                 <Typography ><b>{user.fullname}</b>
                     <span className={classes.tweetsUserName}>{user.username}</span>
-                    <span className={classes.tweetsUserName}>1 ч.</span>
+                    <span className={classNames(classes.tweetsUserName, classes.tweetsTime)}>
+                        {Math.floor(Math.random() * 10) + "ч"}
+                        </span>
                 </Typography>
             </div>
             <Typography className={classes.tweetsText} variant='body1'>

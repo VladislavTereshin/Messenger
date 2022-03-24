@@ -2,7 +2,7 @@ import classes from '*.module.css';
 import { Button, Hidden, IconButton, Typography } from '@material-ui/core';
 import React, { useState } from 'react';
 import { useHomeStyles } from '../pages/Home/theme';
-import TwitterIcon from '@material-ui/icons/AccessibleForward';
+import TwitterIcon from '@material-ui/icons/Twitter';
 import SearchIcon from '@material-ui/icons/Search';
 import PostAddIcon from '@material-ui/icons/PostAdd';
 import ModalBlock from './ModalBlock';
